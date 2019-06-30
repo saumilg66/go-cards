@@ -1,13 +1,14 @@
 package main
 
+import "fmt"
+
 func main() {
 
-	cards := deck{"Ace of Diamonds", newCard()}
-	cards = append(cards, "King of Hearts")
+	cards := newDeck()
 
-	cards.print()
-}
+	hand, remainingHand := deal(cards, 4)
 
-func newCard() string {
-	return "Five of Spades"
+	hand.print()
+	fmt.Println("*******")
+	remainingHand.print()
 }
