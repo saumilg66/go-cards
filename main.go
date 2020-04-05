@@ -6,9 +6,11 @@ func main() {
 
 	cards := newDeck()
 
-	hand, remainingHand := deal(cards, 4)
+	cards.saveToFile("myCurrentDeck.txt")
 
-	hand.print()
+	hand, _ := deal(cards, 4)
+
+	fmt.Println(hand.toString())
 	fmt.Println("*******")
-	remainingHand.print()
+	//remainingHand.print()
 }
