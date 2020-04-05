@@ -6,13 +6,15 @@ func main() {
 
 	cards := newDeck()
 
-	cards.saveToFile("myCurrentDeck.txt")
+	cards.shuffle()
+	cards.print()
+	//cards.saveToFile("myCurrentDeck.txt")
 
-	fromFile := readFromFile("myCurrentDeck.txt")
+	//fromFile := readFromFile("myCurrentDeck.txt")
 
-	hand, _ := deal(fromFile, 4)
+	//hand, _ := deal(cards, 4)
 
-	fmt.Println(hand.toString())
+	//fmt.Println(hand.toString())
 	fmt.Println("*******")
 	//remainingHand.print()
 }
