@@ -10,7 +10,7 @@ func main() {
 
 	fromFile := readFromFile("myCurrentDeck.txt")
 
-	hand, _ := deal(fromFile, 3)
+	hand, _ := deal(fromFile, 4)
 
 	fmt.Println(hand.toString())
 	fmt.Println("*******")
