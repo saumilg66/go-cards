@@ -8,7 +8,9 @@ func main() {
 
 	cards.saveToFile("myCurrentDeck.txt")
 
-	hand, _ := deal(cards, 4)
+	fromFile := readFromFile("myCurrentDeck.txt")
+
+	hand, _ := deal(fromFile, 3)
 
 	fmt.Println(hand.toString())
 	fmt.Println("*******")
